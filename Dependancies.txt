@@ -1,0 +1,109 @@
+To enable dataBinding and viewBinding.
+======================================
+android {
+	...
+    buildFeatures {
+		dataBinding true
+        viewBinding true
+    }
+}
+
+Dependancies for developing an Android app with kotlin and create design in latest material ui.
+================================================================================================
+implementation 'org.jetbrains.kotlin:kotlin-stdlib:1.4.30'
+implementation 'androidx.core:core-ktx:1.3.2'
+implementation 'androidx.appcompat:appcompat:1.2.0'
+implementation 'com.google.android.material:material:1.3.0'
+implementation 'androidx.constraintlayout:constraintlayout:2.0.4'
+
+Dependancies for make a REST api request and get a response.
+============================================================
+implementation 'com.squareup.retrofit2:retrofit:2.9.0'
+implementation 'com.squareup.retrofit2:converter-gson:2.9.0'
+implementation 'com.squareup.okhttp3:logging-interceptor:4.7.2'
+implementation 'com.squareup.retrofit2:adapter-rxjava3:2.9.0'
+implementation 'io.reactivex.rxjava2:rxjava:2.2.10'
+implementation 'io.reactivex.rxjava3:rxandroid:3.0.0'
+
+Dependancy for kotlin coroutines.
+=================================
+implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-android:1.4.2'
+
+Dependancies for viewModel and live data.
+=========================================
+implementation 'android.arch.lifecycle:extensions:1.1.1'
+implementation 'androidx.lifecycle:lifecycle-viewmodel-ktx:2.3.0'
+
+Dependancies for Room Database.
+===============================
+implementation 'androidx.room:room-runtime:2.2.6'
+kapt 'androidx.room:room-compiler:2.2.6'
+kapt 'android.arch.lifecycle:compiler:1.1.1'
+kapt 'android.arch.persistence.room:compiler:1.1.1'
+implementation 'androidx.room:room-ktx:2.2.6'
+implementation 'androidx.lifecycle:lifecycle-viewmodel-ktx:2.2.0'
+androidTestImplementation 'androidx.room:room-testing:2.2.6'
+
+Dependancy for WorkManager.
+===========================
+implementation 'androidx.work:work-runtime:2.2.0'
+
+Dependancies for glide.
+kapt -> Kotlin Annotation Processor Tool can get a reference generated code from kotlin at compile time.
+        It will used to debug an annotation processor.
+========================================================================================================
+implementation 'com.github.bumptech.glide:glide:4.12.0'
+kapt 'com.github.bumptech.glide:compiler:4.12.0'
+
+/**
+* dataBinding buildFeatures 'true' will give advice to use kotlin-kapt.
+* Without adding dataBinding compiler annotation processor application won't to run.
+*/
+====================================================================================
+kapt 'com.android.databinding:compiler:3.1.4'
+
+Dependancy for Chart(Bar, Line, Pie, etc).
+=====================
+implementation 'com.github.PhilJay:MPAndroidChart:v3.1.0'
+
+Dependancy for load a map in app, KTX for the Maps SDK for Android library and for Android Utility Library.
+And used to get current location of device.
+===========================================================================================================
+implementation 'com.google.maps.android:maps-ktx:2.3.0'
+implementation 'com.google.maps.android:maps-utils-ktx:2.3.0'
+implementation 'com.google.android.gms:play-services-maps:17.0.0'
+/**
+* It is recommended to also include the latest Maps SDK and/or Utility Library versions
+* as well to ensure that you have the latest features and bug fixes.
+*/
+implementation 'com.google.maps.android:android-maps-utils:2.2.0'
+implementation 'com.google.android.gms:play-services-location:17.1.0'
+
+Dependancy for load a OSM map in app.
+=====================================
+implementation 'org.osmdroid:osmdroid-android:6.1.0'
+implementation 'com.github.MKergall:osmbonuspack:6.6.0'
+
+Dependancy for File selction.
+/**
+* This file selction library requires coroutines and glide.
+*/
+===========================================================
+implementation 'com.droidninja:filepicker:2.2.5'
+
+Dependancy for asking runtime permission, it can handle callbacks.
+==================================================================
+implementation 'com.karumi:dexter:6.2.2'
+
+Dependancy for multidex.
+========================
+implementation 'androidx.multidex:multidex:2.0.1'
+
+Dependancy for image compressor.
+================================
+implementation 'id.zelory:compressor:2.1.0'
+
+Dependancy for Qr and BarCode scanner.
+======================================
+implementation('com.journeyapps:zxing-android-embedded:3.6.0') { transitive = false }
+implementation 'com.google.zxing:core:3.3.3'
